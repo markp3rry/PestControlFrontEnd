@@ -1,0 +1,65 @@
+/* 
+    Document   : noborders
+    Created on : Jan 21, 2013, 7:11:25 PM
+    Author     : Aslam
+    Description:
+        Purpose of the stylesheet follows.
+*/
+/*hide all ribbons*/
+
+.right-ribbon,.top-right-ribbon,.top-left-ribbon,.left-ribbon,.right-corner,.left-corner,.border-footer-left,.border-footer-right
+{
+    display: none !important;
+}
+.ptable{
+
+    margin-right: 0px;
+}
+
+h1.entry-title{
+    margin-left:-10px;
+    margin-right: -10px;
+}
+#navigation{
+    margin-left: -9px; 
+    max-width: 960px;
+
+}
+#footer{
+
+    padding: 0 10px;
+}
+.entry-title-blog,#navigation ul li:first-child{margin-left: 0px;}
+.sidebar-title{margin-right: 0px;}
+.entry-title-pricing{margin-left: 0px; margin-right: 0px; font-size: 50px;}
+#footer{max-width: 100%;}
+
+
+@media only screen and (max-width: 959px) and (min-width: 768px){
+    #navigation {
+        width: 744px;
+    }
+
+}
+
+@media only screen and (max-width: 767px){
+    .entry-title {
+        margin-left: 0px;
+        font-size: 30px;
+    }
+}
+@media only screen and (min-width: 480px) and (max-width: 767px){
+
+    #footer{  width: auto;}
+    #navigation{margin-left: 0px; float: left;}
+
+}
+
+@media only screen and (max-width: 480px){
+    #footer {
+        padding-left: 0px;
+        padding-right: 0px;
+        width: auto;
+    }
+    #navigation{margin-left: 0px; float: left;}
+}

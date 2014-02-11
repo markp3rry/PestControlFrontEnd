@@ -10,7 +10,6 @@ $(function() {
 		autoplay	: true,
 		interval : 9000
 	});
-			
 });
 /* prettyPhoto Gallery */
 

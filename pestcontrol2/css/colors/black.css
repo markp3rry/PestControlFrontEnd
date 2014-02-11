@@ -1,0 +1,16 @@
+/* =================================================================== */
+/* Default Color Already in Style.css
+====================================================================== */
+
+/* =================================================================== */
+/* Blue #000
+====================================================================== */
+
+a:hover, a:focus,.testimonial-nav i:hover,#twitter a:hover,#footer-bottom a:hover,#contact-top a:hover,.theme-color{color: #000;}
+.entry-title,#current,.headline h4,.feature-boxes .feature-circle:hover,.menu > li:hover > a{background: #000;}
+#scroll-to-top a:hover,.message-top {background-color: #000;}
+section a:hover,.feature-boxes i,.ptable h3 i{color: #000;}
+#current,.menu > li > a:hover,.menu > li:hover > a,#wrapper,.menu ul a:hover,.headline-page h3,.feature-boxes:hover{border-color: #000;}
+.nav-tabs > .active > a, .nav-tabs > .active > a:hover{border-top-color: #000;}
+.btn-times-changing  {background:#000;} 
+.btn-times-changing:hover {background:rgb(6, 136, 190);color: #fff;} 

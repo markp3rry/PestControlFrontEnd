@@ -1,192 +1,625 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-  <meta charset="utf-8">
-  <title>Index - Metro Mania</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="">
-  <meta name="keywords" content="">
-  <link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,600italic,400,300,600' rel='stylesheet' type='text/css'>
 
-  
-  <!-- Stylesheets -->
-  <link href="style/bootstrap.css" rel="stylesheet">
-  <link rel="stylesheet" href="style/font-awesome.css">
-  <link href="style/prettyPhoto.css" rel="stylesheet">
-  <!-- Parallax slider -->
-  <link rel="stylesheet" href="style/slider.css">
-  <!-- Flexslider -->
-  <link rel="stylesheet" href="style/flexslider.css">
+  <!-- HEAD -->
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <title>Pest Control | Knowsley MBC</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <link href='//fonts.googleapis.com/css?family=Open+Sans:400italic,600italic,400,300,600' rel='stylesheet' type='text/css'>
+    
+    <!-- Stylesheets -->
+    <link href="style/bootstrap.css" rel="stylesheet">
+    <link rel="stylesheet" href="style/font-awesome.css">
+    <link href="style/prettyPhoto.css" rel="stylesheet">
+    <!-- Parallax slider -->
+    <link rel="stylesheet" href="style/slider.css">
+    <!-- Flexslider -->
+    <link rel="stylesheet" href="style/flexslider.css">
 
-  <link href="style/style.css" rel="stylesheet">
+    <link href="style/style.css" rel="stylesheet">
 
-  <!-- Colors - Orange, Purple, Light Blue (lblue), Red, Green and Blue -->
-  <link href="style/green.css" rel="stylesheet">
+    <!-- Colors - Orange, Purple, Light Blue (lblue), Red, Green and Blue -->
+    <link href="style/lblue.css" rel="stylesheet">
 
-  
-  
-  <!-- HTML5 Support for IE -->
-  <!--[if lt IE 9]>
-  <script src="js/html5shim.js"></script>
-  <![endif]-->
+    
+    
+    <!-- HTML5 Support for IE -->
+    <!--[if lt IE 9]>
+    <script src="js/html5shim.js"></script>
+    <![endif]-->
 
-  <!-- Favicon -->
-  <link rel="shortcut icon" href="img/favicon/favicon.png">
-</head>
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="img/favicon/favicon.png">
+  </head>
 
-<body>
+  <body>
 
-<!-- Header Starts -->
-<header>
-  <div class="container">
-    <div class="row">
-      <div class="col-md-4 col-sm-4">
-        <div class="logo">
-          <h1><a href="#">Metro <span class="color">Mania</span></a></h1>
-          <div class="hmeta">Responsive Metro Styled Theme</div>
+    <!-- HEADER -->
+    <header>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-4 col-sm-4">
+            <div class="logo">
+              <h1><a href="index.html">Pest <span class="color">Control</span><span> 12</span></a></h1>
+              <div class="hmeta">Knowsley Metropolitan Borough Council</div>
+            </div>
+          </div>
+           <div class="col-md-5 col-md-offset-3 col-sm-6 col-sm-offset-2">   
+             <form class="form-inline" role="form">
+                <div class="btn-group" data-bind="visible: loggedOutNav">
+                  <button type="button" class="btn btn-info dropdown-toggle" data-toggle="dropdown">
+                    <i class="icon icon-link"></i> Quick links <span class="caret"></span>
+                  </button>
+                  <ul class="dropdown-menu" role="menu">
+                    <li><button class="btn btn-default btn-block" data-bind="click: loggedOutLogIn">Log in</button></li>
+                    <li><button class="btn btn-default btn-block" data-bind="click: loggedOutCreateNewAccount">Create a new account</button></li>
+                  </ul>
+                </div>
+                <div class="btn-group" data-bind="visible: loggedInNav">
+                  <button type="button" id="loggedInMenu" class="btn btn-info dropdown-toggle" data-toggle="dropdown">
+                  <i class="icon icon-user"></i> <span id="frog"></span> <span class="caret"></span>
+                  </button> 
+                  <ul class="dropdown-menu" role="menu">
+                    <li><button class="btn btn-default btn-block" data-bind="click: logOut">Sign out</button></li>
+                  </ul>
+                </div>
+            </form> 
+          </div>
         </div>
       </div>
-      <div class="col-md-5 col-md-offset-3 col-sm-6 col-sm-offset-2">
-        
-            <form class="form-inline" role="form">
-              <div class="form-group">
-                <input type="text" class="form-control" id="search" placeholder="Type Something...">
+    </header>
+
+    <!-- REGISTER -->
+    <div data-bind="visible: registerContent">
+      <div class="content">
+        <div class="container">
+          <hr />
+          <div class="register">
+            <div class="row">
+              <div class="col-md-6 col-sm-6">
+                <h2>Register Today</h2>
+                <ul>
+                  <li>Quick and simple registration process</li>
+                  <li>All you need is an active email address</li>
+                  <li>Make, view and modify your bookings online</li>
+                </ul>
               </div>
-              <button type="submit" class="btn btn-default">Search</button>
-            </form>
-        
+              <div class="col-md-6 col-sm-6">
+                <div class="formy">
+                  <h5>New Account</h5>
+                  <div class="form">
+                    <form class="form form-horizontal validate-form" id="tst">
+                      <div class="form-group">
+                        <label class="control-label col-md-3" for="name">First Name</label>
+                        <div class="col-md-9">
+                          <input type="text" class="form-control" id="firstname" name="firstname">
+                        </div>
+                      </div>
+                      <div class="form-group">
+                        <label class="control-label col-md-3">Last Name</label>
+                        <div class="col-md-9">
+                          <input type="text" class="form-control" id="lastname" name="lastname">
+                        </div>
+                      </div>   
+                      <div class="form-group">
+                        <label class="control-label col-md-3">Email</label>
+                        <div class="col-md-9">
+                          <input type="text" class="form-control" id="newAccountEmail" name="email">
+                        </div>
+                      </div>
+                      <div class="form-group">
+                        <label class="control-label col-md-3" for="email">Password</label>
+                        <div class="col-md-9">
+                          <input type="password" class="form-control" id="newAccountPassword" name="password">
+                        </div>
+                      </div>
+                      <div class="form-group">
+                        <label class="control-label col-md-3">Service</label>
+                        <div class="col-md-9">
+                          <select class="form-control" name="customertype">
+                            <option>Residential</option>
+                            <option>Commercial</option>
+                          </select>
+                        </div>
+                      </div>
+                      <div class="form-group">
+                        <div class="col-md-9 col-md-offset-3"> 
+                          <button type="submit" class="btn">Register</button>
+                          <button type="button" class="btn btn-info" data-bind="click: iAmAlreadyRegistered">I am already registered</button>
+                        </div>
+                      </div>
+                    </form>
+                  </div> 
+                </div>
+              </div>
+            </div>
+          </div>              
+        </div>
       </div>
     </div>
-  </div>
-</header>
 
-<!-- Navigation bar starts -->
-
-            <div class="navbar bs-docs-nav" role="banner">
-              <div class="container">
-               <div class="navbar-header">
-                 <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".bs-navbar-collapse">
-                     <span class="sr-only">Toggle navigation</span>
-                     <span class="icon-bar"></span>
-                     <span class="icon-bar"></span>
-                     <span class="icon-bar"></span>
-                 </button>
-               </div>
-               
-                  <nav class="collapse navbar-collapse bs-navbar-collapse" role="navigation">
-                    <ul class="nav navbar-nav">
-                      <li><a href="index.html">Home #1</a></li>
-                      <li><a href="index1.html">Home #2</a></li>
-                      <!-- Refer Bootstrap navbar doc -->
-                      <li class="dropdown">
-                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">Pages #1 <b class="caret"></b></a>
-                         <ul class="dropdown-menu">
-                           <li><a href="landing-page.html">Landing Page</a></li>
-                           <li><a href="pricing.html">Pricing Table</a></li>
-                           <li><a href="service-3.html">Service</a></li>
-                           <li><a href="support.html">Support</a></li>
-                           <li><a href="sitemap.html">Sitemap</a></li>
-                           <li><a href="timeline.html">Timeline</a></li>
-                           <li><a href="404.html">404</a></li>
-                           <li><a href="faq.html">FAQ</a></li>
-                           <li><a href="register1.html">Register</a></li>
-                           <li><a href="login1.html">Login</a></li>
-                         </ul>
-                      </li>                   
-                      <li class="dropdown">
-                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">Pages #2<b class="caret"></b></a>
-                         <ul class="dropdown-menu">
-                           <li><a href="coming-soon.html">Coming Soon</a></li>
-                           <li><a href="features-4.html">Features</a></li>
-                           <li><a href="statement.html">Statement</a></li>
-                           <li><a href="tasks.html">Tasks</a></li>
-                           <li><a href="resume.html">Resume</a></li>
-                           <li><a href="projects.html">Projects</a></li>
-                           <li><a href="make-post.html">Make Post</a></li>
-                           <li><a href="events.html">Events</a></li>
-                           <li><a href="error-log.html">Error Log</a></li>
-                         </ul>
-                      </li>
-                      <li><a href="service.html">Service</a></li>
-                      <li><a href="aboutus.html">About Us</a></li>
-                      <li class="dropdown">
-                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">Blog <b class="caret"></b></a>
-                         <ul class="dropdown-menu">
-                           <li><a href="blog-2.html">Blog #1</a></li>
-                           <li><a href="blog-4.html">Blog #1</a></li>
-                           <li><a href="blog-single.html">Blog Single</a></li>
-                         </ul>
-                       </li>
-                                           
-                      <li><a href="portfolio.html">Portfolio</a></li>
-                      <li><a href="contactus.html">Contact</a></li>
-                    </ul>
-                  </nav>
-                 </div>
-              </div>
-
-<!-- Navigation bar ends -->
-
-<!-- Slider starts -->
-  
-    <div class="full-slider">
-        <!-- Slider (Flex Slider) -->
-          
-          <div class="container">
+    <!-- NEW BOOKING -->
+    <div data-bind="visible: newBookingContent">
+      <div class="content">
+        <div class="container">
+          <hr />
+          <div class="register">
             <div class="row">
               <div class="col-md-12">
-                <div class="flexslider">
-                  <ul class="slides">
-
-                    <li>
-                      
-                      <!-- Slider content -->
-                      <div class="flex-caption">
-                        <!-- Left column -->
-                        <div class="col-l">
-                          
-                            <h2>What Do  Started Today</h2>
-
-                            <h6>Aenean sodales augue ac lacus hendrerit sed rhoncus erat hendrerit. Vivamus vel ultricies elit. Nulla vitae cursus leo. Aenean sodales augue ac lacus hendrerit sed rhoncus erat hendrerit. Vivamus vel ultricies elit. Nulla vitae cursus leo.</h6>
-                     
-
-                        </div>
-                        <!-- Right column -->
-                        <div class="col-r">
-
-                          <!-- Use the class "flex-back" to add background inside flex slider -->
-                         
-                            <h5>Nulla Vitae Rhoncus</h5>
-                            <p>Suspendisse potenti. Morbi ac felis nec mauris imperdiet fermentum. Aenean sodales augue ac lacus hendrerit sed rhoncus erat hendrerit. Vivamus vel ultricies elit. Nulla vitae cursus leo.</p>
-                          
-
-                          <!-- Button -->
-                          <div class="button">
-                            <a href="#"><i class="icon-circle-arrow-down"></i> Download Our Software Today</a>
+                <div class="lrform">
+                  <h5 data-bind="text: newBookingHeader"></h5>
+                  <div class="form" data-bind="visible: newBookingPage1">
+                    <form class="form-horizontal" id="frmNewBookingPage1">
+                      <!-- <div data-bind="visible: newBookingPage1"> -->
+                        <div class="form-group">
+                          <label class="control-label col-md-3" for="username">First Name</label>
+                          <div class="col-md-9">
+                            <input type="text" class="form-control" data-bind="value: newBookingFirstName" name="firstname">
                           </div>
-
+                        </div>
+                        <div class="form-group">
+                          <label class="control-label col-md-3" for="email">Last Name</label>
+                          <div class="col-md-9">
+                            <input type="text" class="form-control" data-bind="value: newBookingLastName" name="lastname">
+                          </div>
+                        </div>
+                        <hr />
+                        <div class="form-group">
+                          <label class="control-label col-md-3" for="email"></label>
+                          <div class="col-md-9">
+                            <p class="form-control-static">Please enter your Postcode and click Search</p>
+                          </div>
+                        </div>
+                        <div class="form-group">
+                          <label class="control-label col-md-3" for="email"></label>
+                          <div class="col-md-12">
+                            <div class="col-md-5">
+                              <input type="text" class="form-control" data-bind="value: newBookingPostcode" name="postcode">
+                            </div>
+                            <div class="col-md-3">
+                              <button type="button" class="btn" data-bind="click: newBookingAddressSearch">Search</button>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="form-group" data-bind="visible: newBookingAddressSelectIsVisible">
+                          <label class="control-label col-md-3" for="email"></label>
+                          <div class="col-md-9">
+                            <select class="form-control" id="newBookingAddressSelect"></select>
+                          </div>
+                        </div>
+                        <hr data-bind="visible: newBookingAddressDetailsAreVisible" />                    
+                        <div class="form-group" data-bind="visible: newBookingAddressDetailsAreVisible">
+                          <label class="control-label col-md-3" for="email">Address</label>
+                          <div class="col-md-9">
+                            <input type="text" class="form-control" data-bind="value: newBookingAddressLine1" name="addrline1">
+                          </div>
+                        </div>
+                        <!-- <div class="form-group" data-bind="visible: newBookingAddressDetailsAreVisible">
+                          <label class="control-label col-md-3" for="email">Addr Line 2</label>
+                          <div class="col-md-9">
+                            <input type="text" class="form-control" data-bind="value: newBookingAddressLine2">
+                          </div>
+                        </div> -->
+                        <div class="form-group" data-bind="visible: newBookingAddressDetailsAreVisible">
+                          <label class="control-label col-md-3" for="email">Town</label>
+                          <div class="col-md-9">
+                            <input type="text" class="form-control" data-bind="value: newBookingTown" name="town">
+                          </div>
+                        </div>
+                        <div class="form-group">
+                          <div class="col-md-9 col-md-offset-3">
+                            <!-- <button data-bind="click: newBookingPage1Page2, enable: newPageBookingEnableButtonPage2" class="btn btn-default">Next <i data-bind="visible:newBookingSpinnerPage2" class="icon icon-spin icon-refresh"></i></button> -->
+                            <button type="submit" class="btn" data-bind="visible: newBookingAddressDetailsAreVisible">Next <i data-bind="visible:newBookingSpinnerPage1" class="icon icon-spin icon-refresh"></i></button>
+                          </div>
+                        </div>
+                      <!-- </div> -->
+                    </form>
+                  </div>
+                  <div class="form" data-bind="visible: newBookingPage2">
+                    <form class="form-horizontal" id="frmNewBookingPage2">
+                      <div class="form-group">
+                        <label class="control-label col-md-3" for="username">Type</label>
+                        <div class="col-md-9">
+                          <select class="form-control required" id="newBookingTypeOfPest"></select>
                         </div>
                       </div>
-
-                    </li>
-
-                    <li>
-                      <div class="flex-caption flex-center">
-                        <h2>Don't Miss This Theme</h2>
-
-                        <p>Aenean sodales augue ac lacus hendrerit sed rhoncus erat hendrerit. Vivamus vel ultricies elit. Nulla vitae cursus leo. Suspendisse potenti. Morbi ac felis nec mauris imperdiet fermentum. </p>
-
-                          <!-- Button -->
-                          <div class="button">
-                            <a href="#">Buy It Now</a>
-                          </div>
-
+                      <div class="form-group">
+                        <label class="control-label col-md-3" for="email">Location</label>
+                        <div class="col-md-9">
+                          <select class="form-control required" id="newBookingLocationOfPest"></select>
+                        </div>
                       </div>
-                    </li>
+                      <div class="form-group">
+                        <label class="control-label col-md-3" for="email">Notes</label>
+                        <div class="col-md-9">
+                          <textarea class="form-control" rows="3" data-bind="value: newBookingNotes"></textarea>
+                        </div>
+                      </div>
+                      <div class="form-group">
+                        <div class="col-md-9 col-md-offset-3">
+                          <!-- <button data-bind="click: newBookingPage2Page1" class="btn btn-default">Previous</button> -->
+                          <!-- <button data-bind="click: newBookingPage2Page3" class="btn btn-default">Next</button> -->
+                          <button type="submit" class="btn">Next</button>
+                        </div>
+                      </div>
+                    </form>
+                  </div>
+                  <div data-bind="visible: newBookingPage3">
+                    <div class="form-group">                
+                      <div class="col-md-12 col-md-offset-0">    
+                        <button data-bind="click: newBookingBookNextAvailable" class="btn btn-default btn-block"><i class="icon-briefcase"></i> Book the next available appointment</button>
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <div class="col-md-12 col-md-offset-0">    
+                        <button data-bind="click: newBookingChooseSpecific" class="btn btn-default btn-block"><i class="icon-briefcase"></i> Choose the day of your appointment</button>
+                      </div>
+                    </div>
+                  </div>
+                  <div data-bind="visible: newBookingPage4">
+                    You will now be redirected to our online payment portal so that you can pay for the service you have selected.
+                    <br />
+                    <br />
+                    <div class="form-group">
+                      <div class="col-md-12 col-md-offset-0">
+                        <button data-bind="click: newBookingPage4Page5" class="btn btn-default">Next</button>
+                      </div>
+                    </div>
+                  </div>
+                  <div data-bind="visible: newBookingPage5">
+                    <div class="container">
+                    <hr />
+                    <div class="row">
+                      <div class="col-md-1">
+                        <i class="icon icon-key"></i> 
+                      </div>
+                      <div class="col-md-3">
+                        Reference
+                      </div>
+                      <div class="col-md-8">
+                        <span data-bind="text: confirmationReference"></span>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-md-1">
+                        <i class="icon icon-calendar"></i>
+                      </div>
+                      <div class="col-md-3">
+                        Date
+                      </div>
+                      <div class="col-md-8">
+                        <span data-bind="text: confirmationDate"></span>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-md-1">
+                        <i class="icon icon-gbp"></i>
+                      </div>
+                      <div class="col-md-3">
+                        Cost
+                      </div>
+                      <div class="col-md-8">
+                        <span data-bind="text: confirmationCost"></span>
+                      </div>
+                    </div>
+                    <hr />
+                    <div class="row">
+                      <div class="col-md-1">
+                        <i class="icon icon-home"></i>
+                      </div>
+                      <div class="col-md-3">
+                        Address
+                      </div>
+                      <div class="col-md-8">
+                        <span data-bind="text: confirmationAddressLine1"></span>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-md-1">
+                        <i class="icon icon-phone"></i>
+                      </div>
+                      <div class="col-md-3">
+                        Phone
+                      </div>
+                      <div class="col-md-8">
+                        <span data-bind="text: confirmationPhone"></span>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-md-1">
+                        <i class="icon icon-envelope"></i>
+                      </div>
+                      <div class="col-md-3">
+                        Email
+                      </div>
+                      <div class="col-md-8">
+                        <span data-bind="text: confirmationEmail"></span>
+                      </div>
+                    </div>
+                    <hr />
+                    <div class="row">
+                      <div class="col-md-1">
+                        <i class="icon icon-bug"></i>
+                      </div>
+                      <div class="col-md-3">
+                        Type
+                      </div>
+                      <div class="col-md-8">
+                        <span data-bind="text: confirmationPestType"></span>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-md-1">
+                        <i class="icon icon-compass"></i>
+                      </div>
+                      <div class="col-md-3">
+                        Location
+                      </div>
+                      <div class="col-md-8">
+                        <span data-bind="text: confirmationPestLocation"></span>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-md-1">
+                        <i class="icon icon-pencil"></i>
+                      </div>
+                      <div class="col-md-3">
+                        Notes
+                      </div>
+                      <div class="col-md-8">
+                        <span data-bind="text: confirmationPestNotes"></span>
+                      </div>
+                    </div>
+                  </div>
+                  <hr />
+                    <p>
+                      Confirmation has been emailed to mark.perry@knowsley.gov.uk
+                    </p>
+                  </div>
+                  <div data-bind="visible: newBookingPage6">
+                    <table class="table table-striped">
+                        <tbody>
+                          <tr>
+                            <td>
+                              <button class="btn btn-success btn-block appt" id="appt0"></button>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>
+                              <button class="btn btn-success btn-block appt" id="appt1"></button>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>
+                              <button class="btn btn-success btn-block appt" id="appt2"></button>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>
+                              <button class="btn btn-success btn-block appt" id="appt3"></button>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>
+                              <button class="btn btn-success btn-block appt" id="appt4"></button>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>
+                              <button class="btn btn-success btn-block appt" id="appt5"></button>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>
+                              <button class="btn btn-success btn-block appt" id="appt6"></button>
+                            </td>
+                          </tr>
+                        </tbody>
+                    </table>
+                  </div>
+                  <!-- <div data-bind="visible: newBookingPage7">
+                    <form class="form-horizontal" id="resetPasswordFrm">
+                      <div class="form-group">
+                        <label class="control-label col-md-3">Email</label>
+                        <div class="col-md-9">
+                          <input type="text" class="form-control" data-bind="value: passwordResetUsername" name="email">
+                        </div>
+                      </div>
+                    </form>
+                  </div> -->
+                </div> 
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+      
 
-                    
-                    <li>
+    <!-- SIGN IN FORM -->
+    <div data-bind="visible: signInContent">
+      <div class="content">
+        <div class="container">
+        <hr />
+          <div class="register">
+            <div class="row">
+              <div class="col-md-12">
+                <div class="lrform">
+                <h5>Login to your account</h5>
+                  <div class="form">
+                    <form class="form-horizontal" id="loginFrm">
+                      <div class="form-group">
+                        <label class="control-label col-md-3" for="username">Email</label>
+                        <div class="col-md-9">
+                          <input type="text" class="form-control" id="username" data-bind="value: loginUsername" name="email">
+                        </div>
+                      </div>
+                      <div class="form-group">
+                        <label class="control-label col-md-3" for="email">Password</label>
+                          <div class="col-md-9">
+                            <input type="password" class="form-control" id="password" data-bind="value: loginPassword" name="password">
+                          </div>
+                      </div>
+                      <div class="form-group">
+                        <div class="col-md-9 col-md-offset-3">
+                          <button type="submit" class="btn btn-primary">Login <i data-bind="visible: loginSpinner" class="icon icon-spin icon-refresh"></i></button>
+                          <button type="button" class="btn btn-info" data-bind="click: registerNewAccount">Register a new account</button>
+                        </div>
+                      </div>
+                      <div class="form-group">
+                        <div class="col-md-9 col-md-offset-3">
+                          <button type="button" class="btn btn-link btn-sm" data-bind="click: forgottenPassword">Forgotten password?</button>
+                        </div>
+                      </div>
+                      <div class="form-group">
+                        <div class="col-md-9 col-md-offset-3">
+                          <span class="help-block text-danger" data-bind="visible: loginError">Incorrect username and / or password</span>
+                        </div>
+                      </div>
+                    </form>
+                  </div> 
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- BOOKING FORM -->
+    <div data-bind="visible: bookingsContent">
+      <div class="content">
+        <div class="container">
+          <h2>My Bookings</h2>
+          <p class="big grey">Something Goes Here.</p>
+          <hr />
+          <div class="row">
+            <div class="col-md-12">
+              <div class="img-portfolio">
+                <p>
+                  <ul id="filters">
+                    <li><a href="#" data-filter="*" class="btn btn-success">All</a></li>
+                    <li><a href="#" data-filter=".one" class="btn btn-success">One</a></li>
+                    <li><a href="#" data-filter=".two" class="btn btn-success">Two</a></li>
+                    <li><a href="#" data-filter=".three" class="btn btn-success">Three</a></li>
+                    <li><a href="#" data-filter=".four" class="btn btn-success">Four</a></li>
+                    <li><a href="#" data-filter=".five" class="btn btn-success">Five</a></li>
+                  </ul>
+                </p>
+                <div id="portfolio">
+                  <div class="element one three">
+                      <a href="img/portfolio/1.jpg" class="prettyphoto">
+                        <img src="img/portfolio/1.jpg" alt=""/>
+                        <div class="pcap">
+                          <h4>Lorem ipsum dolor</h4>
+                          <p>Sed justo dui, scelerisque ut  vel, eleifend id erat.</p>
+                        </div>
+                      </a>
+                  </div>
+                  <div class="element two one">
+                    <a href="img/portfolio/2.jpg" class="prettyphoto">
+                      <img src="img/portfolio/2.jpg" alt=""/>
+                      <div class="pcap">
+                        <h4>Lorem ipsum dolor</h4>
+                        <p>Sed justo dui, scelerisque ut  vel, eleifend id erat.</p>
+                      </div>                           
+                    </a>
+                  </div>
+                  <div class="element three five">
+                    <a href="img/portfolio/3.jpg" class="prettyphoto">
+                      <img src="img/portfolio/3.jpg" alt=""/>
+                      <div class="pcap">
+                        <h4>Lorem ipsum dolor</h4>
+                        <p>Sed justo dui, scelerisque ut  vel, eleifend id erat.</p>
+                      </div>                           
+                    </a>
+                  </div>
+                  <div class="element four two">
+                    <a href="img/portfolio/4.jpg" class="prettyphoto">
+                      <img src="img/portfolio/4.jpg" alt=""/>
+                      <div class="pcap">
+                        <h4>Lorem ipsum dolor</h4>
+                        <p>Sed justo dui, scelerisque ut  vel, eleifend id erat.</p>
+                      </div>                           
+                    </a>
+                  </div>
+                  <div class="element five one">
+                    <a href="img/portfolio/5.jpg" class="prettyphoto">
+                      <img src="img/portfolio/5.jpg" alt=""/>
+                      <div class="pcap">
+                        <h4>Lorem ipsum dolor</h4>
+                        <p>Sed justo dui, scelerisque ut  vel, eleifend id erat.</p>
+                      </div>                           
+                    </a>
+                  </div> 
+                  <div class="element four five">
+                    <a href="img/portfolio/6.jpg" class="prettyphoto">
+                      <img src="img/portfolio/6.jpg" alt=""/>
+                      <div class="pcap">
+                        <h4>Lorem ipsum dolor</h4>
+                        <p>Sed justo dui, scelerisque ut  vel, eleifend id erat.</p>
+                      </div>                           
+                    </a>
+                  </div> 
+                  <div class="element three one">
+                    <a href="img/portfolio/7.jpg" class="prettyphoto">
+                      <img src="img/portfolio/7.jpg" alt=""/>
+                      <div class="pcap">
+                        <h4>Lorem ipsum dolor</h4>
+                        <p>Sed justo dui, scelerisque ut  vel, eleifend id erat.</p>
+                      </div>                           
+                    </a>
+                  </div>
+                  <div class="element three one">
+                    <a href="img/portfolio/8.jpg" class="prettyphoto">
+                      <img src="img/portfolio/8.jpg" alt=""/>
+                      <div class="pcap">
+                        <h4>Lorem ipsum dolor</h4>
+                        <p>Sed justo dui, scelerisque ut  vel, eleifend id erat.</p>
+                      </div>                           
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- HOME PAGE CONTENT -->
+    <div data-bind="visible: homeContent">
+      <div class="full-slider">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-12">
+              <div class="flexslider">
+                <ul class="slides">
+                  <li>
+                    <div class="flex-caption">
+                      <img src="img/photos/stock-photo-19304549-typical-kitchen-of-a-restaurant.jpg" alt="kitchen" />
+                      <!-- <div class="col-l">
+                        <h2>Problem with Pests?</h2>
+                        <h6>Rats. Mice. Wasps. Ants. Jason Taylor.</h6>
+                        <img src="img/photos/stock-photo-19304549-typical-kitchen-of-a-restaurant.jpg" alt="kitchen" />
+                      </div>
+                      <div class="col-r">
+                        <h5>Book a Pest Control Operative Now!</h5>
+                        <p>Highly skilled etc.</p>
+                        <div class="button" data-bind="click: function(data, event) { doINeedToLogIn('newbooking', data, event) } ">
+                          <a>
+                            <i class="icon-book"></i> 
+                            Book Now
+                          </a>
+                        </div>
+                      </div> -->
+                    </div>
+                  </li>
+                  <li>
                       
                       <!-- Slider content -->
                       <div class="flex-caption">
@@ -214,578 +647,158 @@
                       </div>
 
                     </li>
-
-                    
-                    <li>
-
-                      <!-- Slider content -->
-                      <div class="flex-caption">
-                        <!-- Left column -->
-                        <div class="col-l">
-                          <h2>Someone Started Today</h2>
-                          <h6>Suspendisse potenti. Morbi ac felis nec mauris imperdiet fermentum. Aenean sodales augue ac lacus hendrerit sed rhoncus erat hendrerit. Vivamus vel ultricies elit.Vivamus vel ultricies elit.</h6>
-
-
-
-                        </div>
-                        <!-- Right column -->
-                        <div class="col-r">
-
-                          <!-- Use the class "flex-back" to add background inside flex slider -->
-                          
-                            <h2>Nulla Vitae Rhoncus</h2>
-                            <p>Suspendisse potenti. Morbi ac felis nec mauris imperdiet fermentum. Aenean sodales augue ac lacus hendrerit sed rhoncus erat hendrerit. Vivamus vel ultricies elit. Nulla vitae cursus leo.</p>
-                         
-
-                        </div>
-                      </div>
-
-                    </li>
-
-
-                  </ul>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="content">
+        <div class="container">
+          <div class="color-blocks">
+            <div class="row">
+              <div class="col-md-4">
+                <div class="c-block">
+                  <div class="col-l b-red">
+                    <a href="contactus.html">
+                      <i class="icon-envelope-alt"></i>
+                      Contact
+                    </a>
+                  </div>
+                  <div class="col-r b-purple">
+                    <a href="aboutus.html">
+                      <i class="icon-user"></i>
+                      About
+                    </a>
+                  </div>
+                </div>
+                <div class="clearfix">
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="c-block">
+                  <div class="col-l b-green">
+                    <a href="blog.html">
+                      <i class="icon-comments"></i>
+                      Blog
+                    </a>
+                  </div>
+                  <div class="col-r b-blue">
+                    <a href="#">
+                      <i class="icon-facebook"></i>
+                      Facebook
+                    </a>
+                  </div>
+                </div>
+                <div class="clearfix">
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="c-block">
+                  <div class="col-l b-lblue">
+                    <a href="#">
+                      <i class="icon-twitter"></i>
+                      Twitter
+                    </a>
+                  </div>
+                  <div class="col-r b-orange">
+                    <a href="#">
+                      <i class="icon-google-plus"></i>
+                      Google Plus
+                    </a>
+                  </div>
+                </div>
+                <div class="clearfix">
                 </div>
               </div>
             </div>
           </div>
+        </div>
+      </div>
     </div>
 
-<!-- Slider Ends -->
-
-<div class="content">
-  <div class="container">
-
-
-    <!-- Hero Unit -->
-
-    <div class="row center">
-      <div class="col-md-12">
-
-        <div class="bor"></div>
-
-        <h2>Welcome to Metro Mania</h2>
-        <p>Suspendisse potenti. Morbi ac felis nec mauris imperdiet fermentum. Aenean sodales augue ac lacus hendrerit sed rhoncus erat hendrerit. Vivamus vel ultricies elit.</p>
-        <div class="bor"></div>
+    <!-- PASSWORD RESET CONTENT -->
+    <div data-bind="visible: passwordResetContent">
+      <div class="content">
+        <div class="container">
         <hr />
-      </div>  
-    </div>
-
-    <!-- Hero Ends -->      
-
-
-    <div class="row">
-      <div class="col-md-12">
-
-        <div class="bor"></div>
-
-        <!-- Image blocks starts -->
-
-        <ul class="hover-block">
-
-          <li>
-
-            <a href="#">
-              <!-- Image -->
-              <img src="img/photos/tn_1.jpg" alt="" /> 
-              <!-- Content with background color Class -->
-              <div class="hover-content b-orange">
-                <h6>Beautiful Girl</h6>
-                Suspendisse potenti. Morbi ac felis nec mauris imperdiet fermentum. Aenean sodales augue ac lacus hendrerit. 
+          <div class="register">
+            <div class="row">
+              <div class="col-md-12">
+                <div class="lrform">
+                  <h5>Reset your password</h5>
+                  <div class="form">
+                    <form class="form-horizontal" id="passwordResetFrm">
+                      <div class="form-group">
+                        <label class="control-label col-md-3" for="username">Email</label>
+                        <div class="col-md-9">
+                          <input type="text" class="form-control" id="username" data-bind="value: passwordResetUsername" name="email">
+                        </div>
+                      </div>
+                      <div class="form-group">
+                        <div class="col-md-9 col-md-offset-3">
+                          <button type="submit" class="btn btn-primary">Submit <i data-bind="visible: passwordResetSpinner" class="icon icon-spin icon-refresh"></i></button>
+                        </div>
+                      </div>
+                      <div class="form-group">
+                        <div class="col-md-9 col-md-offset-3">
+                          <span class="help-block text-danger" data-bind="visible: passwordResetError">That email address doesn't exist</span>
+                          <span class="help-block text-info" data-bind="visible: passwordResetOK">We have sent you an email with instructions on how to reset your password</span>
+                        </div>
+                      </div>
+                    </form>
+                  </div> 
+                </div>
               </div>
-            </a>
-
-          </li>
-
-
-          <li>
-
-            <a href="#">
-              <img src="img/photos/tn_2.jpg" alt="" /> 
-              <div class="hover-content b-red">
-                <h6>Suspendisse Girl</h6>
-                Suspendisse potenti. Morbi ac felis nec mauris imperdiet fermentum. Aenean sodales augue ac lacus hendrerit. 
-              </div>
-            </a>
-
-          </li>
-
-
-          <li>
-
-            <a href="#">
-              <img src="img/photos/tn_3.jpg" alt="" /> 
-              <div class="hover-content b-purple">
-                <h6>Morbi Girl</h6>
-                Suspendisse potenti. Morbi ac felis nec mauris imperdiet fermentum. Aenean sodales augue ac lacus hendrerit. 
-              </div>
-            </a>
-
-          </li>
-
-
-          <li>
-
-            <a href="#">
-              <img src="img/photos/tn_4.jpg" alt="" /> 
-              <div class="hover-content b-lblue">
-                <h6>Aenean Girl</h6>
-                Suspendisse potenti. Morbi ac felis nec mauris imperdiet fermentum. Aenean sodales augue ac lacus hendrerit. 
-              </div>
-            </a>
-
-          </li>            
-
-        </ul>
-
-        <div class="clearfix"></div>
-
-        <!-- Image blocks ends -->
-      </div>
-    </div>
-
-<div class="bor"></div>
-
-<hr />
-
-
-<!-- Discover starts -->
-
-  <div class="discover">
-    <div class="row">
-      <div class="col-md-12">
-        <h3>Discover</h3>
-        <div class="big grey">Check out some of our Cool Products.</div>
-          <div class="dis-nav button">
-            <a href="#" id="one">Linux 8</a> 
-            <a href="#" id="two">Linux 7</a> 
-            <a href="#" id="three">Linux Phone</a> 
-            <a href="#" id="four">MS Office</a> 
-            <a href="#" id="five">PlayStation</a> 
-            <a href="#" id="six">GTalk</a>
-          </div>
-
-          <div class="dis-content">
-            <div class="one">
-                <h3>Linux 8</h3>
-                <p>Linux 8. Suspendisse potenti. Morbi ac felis nec mauris imperdiet fermentum. Aenean sodales augue ac lacus hendrerit sed rhoncus erat hendrerit. Vivamus vel ultricies elit. Aliquam ut feugiat ante. Curabitur lacinia nulla vel tellus elementum non mollis justo aliquam.</p>
-                <a href="#" class="btn btn-warning"><i class="icon-shopping-cart"></i> Buy Now</a> <a href="#" class="btn btn-success">Try Now</a>
             </div>
-            <div class="two">
-                <h3>Linux 7</h3>
-                <p>Linux 7. Suspendisse potenti. Morbi ac felis nec mauris imperdiet fermentum. Aenean sodales augue ac lacus hendrerit sed rhoncus erat hendrerit. Vivamus vel ultricies elit. Aliquam ut feugiat ante. Curabitur lacinia nulla vel tellus elementum non mollis justo aliquam.</p>
-                <a href="#" class="btn btn-warning"><i class="icon-shopping-cart"></i> Buy Now</a> <a href="#" class="btn btn-success">Try Now</a>
-            </div>
-            <div class="three">
-               <h3>Linux Phone</h3>
-                <p>Linux Phone. Suspendisse potenti. Morbi ac felis nec mauris imperdiet fermentum. Aenean sodales augue ac lacus hendrerit sed rhoncus erat hendrerit. Vivamus vel ultricies elit. Aliquam ut feugiat ante. Curabitur lacinia nulla vel tellus elementum non mollis justo aliquam.</p>
-                <a href="#" class="btn btn-warning"><i class="icon-shopping-cart"></i> Buy Now</a> <a href="#" class="btn btn-success">Try Now</a>              
-            </div>
-            <div class="four">
-               <h3>MS Office</h3>
-                <p>MS Office. Suspendisse potenti. Morbi ac felis nec mauris imperdiet fermentum. Aenean sodales augue ac lacus hendrerit sed rhoncus erat hendrerit. Vivamus vel ultricies elit. Aliquam ut feugiat ante. Curabitur lacinia nulla vel tellus elementum non mollis justo aliquam.</p>
-                <a href="#" class="btn btn-warning"><i class="icon-shopping-cart"></i> Buy Now</a> <a href="#" class="btn btn-success">Try Now</a>              
-            </div>
-            <div class="five">
-               <h3>PlayStation</h3>
-                <p>PlayStation. Suspendisse potenti. Morbi ac felis nec mauris imperdiet fermentum. Aenean sodales augue ac lacus hendrerit sed rhoncus erat hendrerit. Vivamus vel ultricies elit. Aliquam ut feugiat ante. Curabitur lacinia nulla vel tellus elementum non mollis justo aliquam.</p>
-                <a href="#" class="btn btn-warning"><i class="icon-shopping-cart"></i> Buy Now</a> <a href="#" class="btn btn-success">Try Now</a>              
-            </div>
-            <div class="six">
-               <h3>GTalk</h3>
-                <p>GTalk. Suspendisse potenti. Morbi ac felis nec mauris imperdiet fermentum. Aenean sodales augue ac lacus hendrerit sed rhoncus erat hendrerit. Vivamus vel ultricies elit. Aliquam ut feugiat ante. Curabitur lacinia nulla vel tellus elementum non mollis justo aliquam.</p>
-                <a href="#" class="btn btn-warning"><i class="icon-shopping-cart"></i> Buy Now</a> <a href="#" class="btn btn-success">Try Now</a>              
-            </div>
-          </div>
-      </div>
-    </div>
-  </div>
-
-<!-- Disconver ends --> 
-
-<hr />
-
-<div class="bor"></div>
-
-<div class="service-three">
-  <div class="row">
-
-     <div class="col-md-3">
-      <!-- Service title with tag -->
-        <h6 class="bold grey">SOME TAG</h6>
-        <h3>What We Do In Free Time?</h3>
-        <p>Aenean sodales augue ac lacus hendrerit sed rhoncus erat hendrerit. Vivamus vel ultricies elit.</p>
-        <a href="#">Check out everything <i class="icon-double-angle-right"></i> </a>
-        <hr />
-     </div>
-
-     <div class="col-md-7">
-
-        <!--  Service #1 -->
-        <!-- Service icon -->
-        <div class="service-icon red">
-          <i class="icon-camera"></i>
-        </div>
-
-        <div class="service-content">
-          <!-- Title -->
-          <h5>We Design Websites</h5>
-          <p>Aenean sodales augue ac lacus hendrerit sed rhoncus erat hendrerit. Vivamus vel ultricies elit.</p>
-        </div>
-
-        <hr />
-
-        <!-- Service #2 -->
-
-        <div class="service-icon orange">
-          <i class="icon-desktop"></i>
-        </div>
-
-        <div class="service-content">
-          <h5>Our Designs are Responsive</h5>
-          <p>Aenean sodales augue ac lacus hendrerit sed rhoncus erat hendrerit. Vivamus vel ultricies elit.</p>
-        </div>
-
-        <hr />   
-
-        <!-- Service #3 -->
-
-        <div class="service-icon lblue">
-          <i class="icon-cloud"></i>
-        </div>
-
-        <div class="service-content">
-          <h5>Everything in Cloud</h5>
-          <p>Aenean sodales augue ac lacus hendrerit sed rhoncus erat hendrerit. Vivamus vel ultricies elit.</p>
-        </div>
-        
-        <hr />
-
-        <!-- Service #4 -->
-
-        <div class="service-icon purple">
-          <i class="icon-user"></i>
-        </div>
-
-        <div class="service-content">
-          <h5>Top Notch Support</h5>
-          <p>Aenean sodales augue ac lacus hendrerit sed rhoncus erat hendrerit. Vivamus vel ultricies elit.</p>
-        </div>
-        
-        <br />
-
-
-        <div class="clearfix"></div>
-
-     </div>
-
-     <div class="col-md-2">
-      <h6 class="grey bold">Check This</h6>
-      <ul>
-        <li><a href="#">Condimentum</a></li>
-        <li><a href="#">Etiam at</a></li>
-        <li><a href="#">Fusce vel</a></li>
-        <li><a href="#">Vivamus</a></li>
-        <li><a href="#">Pellentesque</a></li>
-      </ul>
-
-     </div>
-
-  </div>
-</div>
-
-
-<hr />
-
-
-
-<!-- Features starts -->
-
-<div class="features-four">
-
-  <h3>Features</h3>
-  <p>Aenean sodales augue ac lacus hendrerit sed rhoncus erat hendrerit. Vivamus vel ultricies elit.</p>
-
-  <br />
-
-  <div class="row">
-
-    <div class="col-md-4">
-      <div class="f-block b-red">
-        <a href="#"><i class="icon-briefcase"></i></a>
-        <a href="#"><h4>Vivamus vel ultricies eultrlit</h4></a>
-        <p>Suspendisse potenti. Morbi ac felis nec mauris imperdiet fermentum. Vivamus vel ultricies elit.</p>
-      </div>
-    </div>
-
-    <div class="col-md-4">
-      <div class="f-block b-purple">
-        <a href="#"><i class="icon-music"></i></a>
-        <a href="#"><h4>Morbi Acfelis Ecmauris</h4></a>
-        <p>Suspendisse potenti. Morbi ac felis nec mauris imperdiet fermentum. Vivamus vel ultricies elit.</p>
-      </div>
-    </div>
-
-    <div class="col-md-4">
-      <div class="f-block b-lblue">
-        <a href="#"><i class="icon-camera"></i></a>
-        <a href="#"><h4>Suspendisse Potenti Spahe</h4></a>
-        <p>Suspendisse potenti. Morbi ac felis nec mauris imperdiet fermentum. Vivamus vel ultricies elit.</p>
-      </div>
-    </div>        
-
-  </div>
-</div>
-
-<!-- Features ends -->
-
-<div class="border"></div>
-
-<!-- Product & links starts -->
-
-  <div class="prod">
-    <div class="row">
-      <div class="col-md-4">
-        <div class="home-links">
-          <div class="col-l">
-            <h5>Downloads</h5>
-            <ul>
-              <li><a href="#">Linux 8</a></li>
-              <li><a href="#">PlayStation</a></li>
-              <li><a href="#">GTalk</a></li>
-              <li><a href="#">Google Search</a></li>
-              <li><a href="#">Linux Phone</a></li>
-            </ul>
-          </div>
-          <div class="col-r">
-            <h5>Support</h5>
-            <ul>
-              <li><a href="#">Linux Update</a></li>
-              <li><a href="#">PlayStation</a></li>
-              <li><a href="#">GTalk</a></li>
-              <li><a href="#">Google Search</a></li>
-              <li><a href="#">Linux Phone</a></li>
-            </ul>
-          </div>
-          <div class="clearfix"></div>
-        </div>
-      </div>
-    
-      <div class="col-md-8"> 
-        <div class="home-product">
-          <div class="home-prod-img" id="s1">
-              <img src="img/photos/s1.jpg" class="img-responsive" alt=""/>
-              <img src="img/photos/s2.jpg" class="img-responsive" alt=""/>
-              <img src="img/photos/s3.jpg" class="img-responsive" alt=""/>
-          </div>
-          <h3>Canonical Linux 8</h3>
-          <p>Aliquam ut feugiat ante. Curabitur justo aliquam. Maecenas turpis urna, eleifend et venenatis eget, ultricies quis urna. Aliquam ut feugiat ante. Curabitur justo aliquam. Aliquam ut feugiat ante. Curabitur justo aliquam. </p>
-          <div class="clearfix"></div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-<!-- Product & links ends --> 
-
-
-
-<!-- Color blocks starts -->
-
-  <div class="color-blocks">
-    <div class="row">
-
-      <div class="col-md-4">
-
-        <div class="c-block">
-
-          <!-- Left column with color background -->
-          <div class="col-l b-red">
-            <!-- Link -->
-            <a href="contactus.html">
-              <!-- Icon -->
-              <i class="icon-envelope-alt"></i>
-              <!-- Text -->
-              Contact
-            </a>
-          </div>
-
-          <div class="col-r b-purple">
-            <a href="aboutus.html">
-              <i class="icon-user"></i>
-              About
-            </a>
-          </div>
-
-        </div>
-
-        <div class="clearfix"></div>
-
-      </div>
-      
-      <div class="col-md-4">
-
-        <div class="c-block">
-
-          <!-- Left column with color background -->
-          <div class="col-l b-green">
-            <!-- Link -->
-            <a href="blog.html">
-              <!-- Icon -->
-              <i class="icon-comments"></i>
-              <!-- Text -->
-              Blog
-            </a>
-          </div>
-
-          <div class="col-r b-blue">
-            <a href="#">
-              <i class="icon-facebook"></i>
-              Facebook
-            </a>
-          </div>
-
-        </div>
-
-        <div class="clearfix"></div>
-
-      </div>
-      
-      <div class="col-md-4">
-
-        <div class="c-block">
-
-          <!-- Left column with color background -->
-          <div class="col-l b-lblue">
-            <!-- Link -->
-            <a href="#">
-              <!-- Icon -->
-              <i class="icon-twitter"></i>
-              <!-- Text -->
-              Twitter
-            </a>
-          </div>
-
-          <div class="col-r b-orange">
-            <a href="#">
-              <i class="icon-google-plus"></i>
-              Google Plus
-            </a>
-          </div>
-
-        </div>
-
-        <div class="clearfix"></div>
-
-      </div>
-
-    </div>
-  </div>
-
-
-<!-- Color blocks ends -->
-
-
-  </div>
-</div>
-
-<!-- Social -->
-
-<div class="social-links">
-  <div class="container">
-    <div class="row">
-      <div class="col-md-12">
-        <p class="big"><span>Follow Us On</span> <a href="#"><i class="icon-facebook"></i>Facebook</a> <a href="#"><i class="icon-twitter"></i>Twitter</a> <a href="#"><i class="icon-google-plus"></i>Google Plus</a> <a href="#"><i class="icon-linkedin"></i>LinkedIn</a></p>
-      </div>
-    </div>    
-  </div>
-</div>
-
-
-<!-- Footer -->
-<footer>
-  <div class="container">
-    <div class="row">
-
-      <div class="widgets">
-        <div class="col-md-4">
-          <div class="fwidget">
-
-            <div class="col-l">
-              <h6>Downlaods</h6>
-              <ul>
-                <li><a href="#">Condimentum</a></li>
-                <li><a href="#">Etiam at</a></li>
-                <li><a href="#">Fusce vel</a></li>
-                <li><a href="#">Vivamus</a></li>
-                <li><a href="#">Pellentesque</a></li>
-              </ul>
-            </div>
-
-            <div class="col-r">
-              <h6>Support</h6>
-              <ul>
-                <li><a href="#">Condimentum</a></li>
-                <li><a href="#">Etiam at</a></li>
-                <li><a href="#">Fusce vel</a></li>
-                <li><a href="#">Vivamus</a></li>
-                <li><a href="#">Pellentesque</a></li>
-              </ul>
-            </div>
-
-          </div>
-        </div>
-
-        <div class="col-md-4">
-          <div class="fwidget">
-            <h6>Categories</h6>
-            <ul>
-              <li><a href="#">Condimentum - Condimentum gravida</a></li>
-              <li><a href="#">Etiam at - Condimentum gravida</a></li>
-              <li><a href="#">Fusce vel - Condimentum gravida</a></li>
-              <li><a href="#">Vivamus - Condimentum gravida</a></li>
-              <li><a href="#">Pellentesque - Condimentum gravida</a></li>
-            </ul>
-          </div>
-        </div>
-
-        <div class="col-md-4">
-          <div class="fwidget">
-            <h6>Recent Posts</h6>
-            <ul>
-              <li><a href="#">Sed eu leo orci, condimentum gravida metus</a></li>
-              <li><a href="#">Etiam at nulla ipsum, in rhoncus purus</a></li>
-              <li><a href="#">Fusce vel magna faucibus felis dapibus facilisis</a></li>
-              <li><a href="#">Vivamus scelerisque dui in massa</a></li>
-              <li><a href="#">Pellentesque eget adipiscing dui semper</a></li>
-            </ul>
           </div>
         </div>
       </div>
     </div>
-    <div class="row"> 
-      <div class="col-md-12">
-          <div class="copy">
-            <h6>Metro <span class="color">Mania</span></h6>
-            <p>Copyright &copy; <a href="#">Your Site</a> - <a href="index.html">Home</a> | <a href="aboutus.html">About Us</a> | <a href="faq.html">FAQ</a> | <a href="contactus.html">Contact Us</a></p>
+
+    <!-- SOCIAL LINKS -->
+    <div class="social-links">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <p class="big">
+              <!-- <span>Follow Us On</span> <a href="#"><i class="icon-facebook"></i>Facebook</a> <a href="#"><i class="icon-twitter"></i>Twitter</a> <a href="#"><i class="icon-google-plus"></i>Google Plus</a> <a href="#"><i class="icon-linkedin"></i>LinkedIn</a> -->
+            </p>
           </div>
+        </div>    
       </div>
     </div>
-  <div class="clearfix"></div>
-  </div>
-</footer> 
 
-<!-- JS -->
-<script src="js/jquery.js"></script>
-<script src="js/bootstrap.js"></script> 
-<script src="js/jquery.isotope.js"></script> <!-- Isotope for gallery -->
-<script src="js/jquery.prettyPhoto.js"></script> <!-- prettyPhoto for images -->
-<script src="js/jquery.cslider.js"></script> <!-- Parallax slider -->
-<script src="js/modernizr.custom.28468.js"></script>
-<script src="js/filter.js"></script> <!-- Filter for support page -->
-<script src="js/cycle.js"></script> <!-- Cycle slider -->
-<script src="js/jquery.flexslider-min.js"></script> <!-- Flex slider -->
+    <!-- FOOTER -->
+    <footer>
+      <div class="container">
+        <div class="row"> 
+          <div class="col-md-12">
+            <div class="copy">
+              <p>&copy; <a href="http://www.knowsley.gov.uk" target="_blank">Knowsley Metropolitan Borough Council</a></p>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix">
+        </div>
+      </div>
+    </footer> 
 
-<script src="js/easing.js"></script> <!-- Easing -->
-<script src="js/custom.js"></script>
-</body>
+    <script src="js/jquery.js"></script>
+    <script src="js/bootstrap.js"></script> 
+    <script src="js/jquery.isotope.js"></script> <!-- Isotope for gallery -->
+    <script src="js/jquery.prettyPhoto.js"></script> <!-- prettyPhoto for images -->
+    <script src="js/jquery.cslider.js"></script> <!-- Parallax slider -->
+    <script src="js/modernizr.custom.28468.js"></script>
+    <script src="js/filter.js"></script> <!-- Filter for support page -->
+    <script src="js/cycle.js"></script> <!-- Cycle slider -->
+    <script src="js/jquery.flexslider-min.js"></script> <!-- Flex slider -->
+    <script src="js/easing.js"></script> <!-- Easing -->
+    <script src="js/custom.js"></script>
+    <script type="text/javascript" src="//ajax.aspnetcdn.com/ajax/knockout/knockout-2.2.1.js"></script> <!-- knockout.js -->
+    <script type="text/javascript" src="js/url.js"></script>
+    <script type="text/javascript" src="js/jquery.validate.min.js"></script>
+    <script type="text/javascript" src="js/additional-methods.js"></script>
+    <script type="text/javascript" src="js/pestcontrol.js"></script> <!-- all the logic that makes the site run -->
+  </body>
 </html>
